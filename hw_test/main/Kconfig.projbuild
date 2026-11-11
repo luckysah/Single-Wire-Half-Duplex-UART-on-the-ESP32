@@ -1,0 +1,43 @@
+menu "Robot hardware test"
+
+    config HWT_I2C_SDA
+        int "MPU6050 SDA GPIO (board pin A5)"
+        default 12
+
+    config HWT_I2C_SCL
+        int "MPU6050 SCL GPIO (board pin A4)"
+        default 11
+
+    config HWT_DXL_TX
+        int "DYNAMIXEL TX GPIO (board pin TX1)"
+        default 43
+
+    config HWT_DXL_RX
+        int "DYNAMIXEL RX GPIO (board pin RX0, jumpered to TX1)"
+        default 44
+
+    config HWT_DXL_BAUD
+        int "DYNAMIXEL baud rate the motors were set to"
+        default 1000000
+
+    config HWT_DXL_ID_LEFT
+        int "Left motor ID"
+        default 2
+
+    config HWT_DXL_ID_RIGHT
+        int "Right motor ID"
+        default 1
+
+    config HWT_PING_COUNT
+        int "Pings per motor in the bus reliability test"
+        default 1000
+
+    config HWT_SPIN_TEST
+        bool "Spin each motor slowly (wheels must be free)"
+        default y
+
+    config HWT_SPIN_VELOCITY
+        int "Spin test speed (units of 0.229 rpm)"
+        default 20
+
+endmenu
