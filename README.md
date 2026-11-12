@@ -3,7 +3,7 @@
 Some devices use single-wire half-duplex UART: sending and receiving share one data wire, taking turns. The ESP32 has separate TX and RX pins, so this project joins them into one wire, sets TX to open-drain so it lets go of the line when idle, and uses a BSS138 level shifter to go from 3.3 V to 5 V. As the example, the ESP32 talks to smart servo motors (DYNAMIXEL XL430) directly, without the maker's controller board.
 
 **For the full build guide, wiring, schematic and results, visit the project page:**
-https://luckysah.github.io/projects/esp32-half-duplex-uart/
+https://luckysah.com/projects/esp32-half-duplex-uart/
 
 ## What's in this repo
 
